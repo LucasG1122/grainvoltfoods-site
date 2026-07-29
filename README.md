@@ -17,6 +17,8 @@ grainvolt-site/
 ├── index.html      # Page structure, content, and metadata
 ├── styles.css      # Responsive layout and visual design
 ├── favicon.svg     # Original local browser icon
+├── hero-rice-cereal-720.jpg   # Responsive hero product image
+├── hero-rice-cereal-1122.jpg  # High-resolution hero product image
 ├── og.png          # Original local social-sharing image
 └── README.md       # Project and deployment instructions
 ```
@@ -38,8 +40,8 @@ No installation or build command is required.
 
 ## Deploy to a generic static host
 
-1. Upload `index.html`, `styles.css`, `favicon.svg`, and any local social image
-   to the host's public web directory.
+1. Upload `index.html`, `styles.css`, `favicon.svg`, both local hero images,
+   and the local social image to the host's public web directory.
 2. Keep the files at the same relative paths.
 3. Configure the host to serve `index.html` at the site root.
 4. Enable HTTPS using the host's certificate or managed HTTPS option.
