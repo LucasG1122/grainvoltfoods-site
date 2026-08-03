@@ -548,6 +548,7 @@ h2 {
   max-width: 44rem;
   color: var(--text-soft);
   font-size: clamp(1rem, 1.4vw, 1.13rem);
+  container-type: inline-size;
 }
 
 .about-copy > p:first-child {
@@ -575,6 +576,7 @@ h2 {
   min-height: 8.7rem;
   padding: 1.4rem 1.15rem 1.15rem;
   background: var(--paper);
+  container-type: inline-size;
 }
 
 .facts div::before {
@@ -603,14 +605,33 @@ h2 {
 }
 
 .facts dd {
+  max-width: 100%;
   margin: 0;
   color: var(--ink);
   font-family: var(--heading);
   font-size: clamp(1.05rem, 1.6vw, 1.32rem);
+  font-size: min(clamp(1.05rem, 1.6vw, 1.32rem), 10cqi);
   font-weight: 900;
   letter-spacing: -0.015em;
   line-height: 1.05;
   text-transform: uppercase;
+  word-break: keep-all;
+  text-wrap: wrap;
+}
+
+.fact-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@container (max-width: 36rem) {
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .facts div {
+    min-height: auto;
+  }
 }
 
 .development-section {
@@ -657,12 +678,14 @@ h2 {
 
 .feature-card {
   position: relative;
+  min-width: 0;
   min-height: 23rem;
   overflow: hidden;
   padding: clamp(1.65rem, 3.4vw, 2.6rem);
   border: 2px solid var(--ink);
   background: var(--ink);
   color: var(--white);
+  container-type: inline-size;
   transition:
     border-color 160ms ease,
     box-shadow 160ms ease,
@@ -719,6 +742,7 @@ h2 {
   margin-bottom: 1.2rem;
   font-family: var(--heading);
   font-size: clamp(1.8rem, 2.8vw, 2.65rem);
+  font-size: min(clamp(1.8rem, 2.8vw, 2.65rem), 8.5cqi);
   font-weight: 900;
   letter-spacing: -0.025em;
   line-height: 0.98;
