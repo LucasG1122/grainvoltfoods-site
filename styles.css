@@ -8,7 +8,7 @@
   --volt: #dedf21;
   --volt-dark: #666200;
   --volt-soft: #eef16e;
-  --electric-teal: #2fd6c4;
+  --electric-cyan: #00a8ff;
   --bronze: #a67c4f;
   --bronze-dark: #60432c;
   --text-soft: #656258;
@@ -678,6 +678,8 @@ h2 {
 }
 
 .feature-card {
+  --card-accent: var(--bronze);
+
   position: relative;
   min-width: 0;
   min-height: 23rem;
@@ -693,38 +695,28 @@ h2 {
     transform 160ms ease;
 }
 
+.feature-card:nth-child(2) {
+  --card-accent: var(--volt);
+}
+
+.feature-card:nth-child(3) {
+  --card-accent: var(--electric-cyan);
+}
+
 .feature-card::before {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   height: 9px;
-  background: var(--bronze);
+  background: var(--card-accent);
   content: "";
-}
-
-.feature-card:nth-child(2)::before {
-  background: var(--volt);
-}
-
-.feature-card:nth-child(3)::before {
-  background: var(--electric-teal);
 }
 
 .feature-card:hover {
   transform: translate(-4px, -4px);
-  border-color: var(--bronze);
-  box-shadow: 10px 10px 0 var(--bronze);
-}
-
-.feature-card:nth-child(2):hover {
-  border-color: var(--volt);
-  box-shadow: 10px 10px 0 var(--volt);
-}
-
-.feature-card:nth-child(3):hover {
-  border-color: var(--electric-teal);
-  box-shadow: 10px 10px 0 var(--electric-teal);
+  border-color: var(--card-accent);
+  box-shadow: 10px 10px 0 var(--card-accent);
 }
 
 .card-number {
