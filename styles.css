@@ -8,6 +8,7 @@
   --volt: #dedf21;
   --volt-dark: #666200;
   --volt-soft: #eef16e;
+  --electric-teal: #2fd6c4;
   --bronze: #a67c4f;
   --bronze-dark: #60432c;
   --text-soft: #656258;
@@ -707,7 +708,7 @@ h2 {
 }
 
 .feature-card:nth-child(3)::before {
-  background: var(--cream);
+  background: var(--electric-teal);
 }
 
 .feature-card:hover {
@@ -722,8 +723,8 @@ h2 {
 }
 
 .feature-card:nth-child(3):hover {
-  border-color: var(--cream);
-  box-shadow: 10px 10px 0 var(--cream);
+  border-color: var(--electric-teal);
+  box-shadow: 10px 10px 0 var(--electric-teal);
 }
 
 .card-number {
