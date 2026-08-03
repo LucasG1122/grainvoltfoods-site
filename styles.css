@@ -706,6 +706,10 @@ h2 {
   background: var(--volt);
 }
 
+.feature-card:nth-child(3)::before {
+  background: var(--cream);
+}
+
 .feature-card:hover {
   transform: translate(-4px, -4px);
   border-color: var(--bronze);
@@ -715,6 +719,11 @@ h2 {
 .feature-card:nth-child(2):hover {
   border-color: var(--volt);
   box-shadow: 10px 10px 0 var(--volt);
+}
+
+.feature-card:nth-child(3):hover {
+  border-color: var(--cream);
+  box-shadow: 10px 10px 0 var(--cream);
 }
 
 .card-number {
