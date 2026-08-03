@@ -390,6 +390,7 @@ h2 {
 
 .whole-word-heading {
   word-break: keep-all;
+  text-wrap: wrap;
 }
 
 .heading-word {
@@ -534,6 +535,15 @@ h2 {
   gap: clamp(3rem, 8vw, 8rem);
 }
 
+.about-grid > div:first-child {
+  container-type: inline-size;
+}
+
+.about-grid h2 {
+  font-size: clamp(2.2rem, 5vw, 4.75rem);
+  font-size: min(clamp(2.2rem, 5vw, 4.75rem), 10.5cqi);
+}
+
 .about-copy {
   max-width: 44rem;
   color: var(--text-soft);
@@ -628,6 +638,15 @@ h2 {
   align-items: end;
   margin-bottom: clamp(3rem, 6vw, 5rem);
   gap: 3rem;
+}
+
+.section-heading > div:first-child {
+  container-type: inline-size;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 4.75rem);
+  font-size: min(clamp(2.2rem, 5vw, 4.75rem), 11cqi);
 }
 
 .feature-grid {
@@ -750,7 +769,12 @@ h2 {
 
 .status-copy h2 {
   max-width: 100%;
-  font-size: clamp(2.65rem, 4.6vw, 4.45rem);
+  font-size: clamp(2.15rem, 4.6vw, 4.45rem);
+  font-size: min(clamp(2.15rem, 4.6vw, 4.45rem), 9.25cqi);
+}
+
+.status-copy {
+  container-type: inline-size;
 }
 
 .status-copy > p:last-child {
@@ -831,6 +855,12 @@ h2 {
 
 .contact-copy h2 {
   color: var(--ink);
+  font-size: clamp(2.2rem, 5vw, 4.75rem);
+  font-size: min(clamp(2.2rem, 5vw, 4.75rem), 9cqi);
+}
+
+.contact-copy {
+  container-type: inline-size;
 }
 
 .contact-copy > p:last-child {
@@ -950,7 +980,7 @@ h2 {
   .section-heading,
   .status-panel,
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .about-grid {
@@ -1028,7 +1058,7 @@ h2 {
   .section-heading,
   .status-panel,
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .about-grid {
@@ -1036,7 +1066,7 @@ h2 {
   }
 
   .feature-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .feature-card {
@@ -1102,14 +1132,6 @@ h2 {
   h1 {
     max-width: 11ch;
     font-size: clamp(3.65rem, 18vw, 5.25rem);
-  }
-
-  h2 {
-    font-size: clamp(2.5rem, 11vw, 3.85rem);
-  }
-
-  .status-copy h2 {
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
   }
 
   .hero-inner {
@@ -1195,14 +1217,6 @@ h2 {
 
   h1 {
     font-size: 3.25rem;
-  }
-
-  h2 {
-    font-size: clamp(2.2rem, 10.5vw, 2.55rem);
-  }
-
-  .status-copy h2 {
-    font-size: clamp(2.15rem, 10.5vw, 2.5rem);
   }
 
   .section {
