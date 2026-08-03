@@ -18,8 +18,8 @@ grainvolt-site/
 ├── styles.css      # Responsive layout and visual design
 ├── favicon-clean.png              # Transparent GrainVolt symbol
 ├── grainvolt-logo-clean.png       # Supplied GrainVolt lockup, background removed
-├── hero-rice-cereal-volt-720.jpg  # Responsive campaign product image
-├── hero-rice-cereal-volt-1122.jpg # High-resolution campaign product image
+├── hero-rice-cereal-blend-720.jpg  # Responsive campaign product image
+├── hero-rice-cereal-blend-1120.jpg # High-resolution campaign product image
 ├── og-volt.jpg                    # 1200×630 social sharing card
 └── README.md       # Project and deployment instructions
 ```
@@ -42,7 +42,7 @@ No installation or build command is required.
 ## Deploy to a generic static host
 
 1. Upload `index.html`, `styles.css`, `favicon-clean.png`,
-   `grainvolt-logo-clean.png`, both Volt hero images, and
+   `grainvolt-logo-clean.png`, both blended hero images, and
    `og-volt.jpg` to the host's public web directory.
 2. Keep the files at the same relative paths.
 3. Configure the host to serve `index.html` at the site root.
