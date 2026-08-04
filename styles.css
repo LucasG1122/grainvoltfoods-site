@@ -713,10 +713,12 @@ h2 {
   content: "";
 }
 
-.feature-card:hover {
-  transform: translate(-4px, -4px);
-  border-color: var(--card-accent);
-  box-shadow: 10px 10px 0 var(--card-accent);
+@media (hover: hover) and (pointer: fine) {
+  .feature-card:hover {
+    transform: translate(-4px, -4px);
+    border-color: var(--card-accent);
+    box-shadow: 10px 10px 0 var(--card-accent);
+  }
 }
 
 .card-number {
@@ -1257,8 +1259,7 @@ h2 {
 }
 
 @media (hover: none) {
-  .button:hover,
-  .feature-card:hover {
+  .button:hover {
     transform: none;
   }
 }
